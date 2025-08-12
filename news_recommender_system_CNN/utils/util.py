@@ -3,7 +3,7 @@ import sys
 from news_recommender_system_CNN.exception.exception_handler import AppException
 
 
-def read_yaml(file_path: str) -> dict:
+def read_yaml_file(file_path: str) -> dict:
     """
     Reads a YAML file and returns its content as a dictionary.
     Args:

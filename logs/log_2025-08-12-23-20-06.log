@@ -1,0 +1,8 @@
+[2025-08-12 23:20:06,119] root - INFO - ====================Data Ingestion log started.==================== 
+[2025-08-12 23:20:06,119] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-12 23:20:06,119] root - INFO - Downloading data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-12 23:20:06,707] root - INFO - Downloaded data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-12 23:20:06,776] root - INFO - Extracting zip file: artifacts/dataset/raw_data/data.zip into dir: artifacts/dataset/ingested_data
+[2025-08-12 23:20:06,777] root - INFO - ====================Data Ingestion log completed.==================== 
+
+
