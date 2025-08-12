@@ -1,0 +1,19 @@
+[2025-08-13 00:34:24,814] numexpr.utils - INFO - Note: NumExpr detected 22 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-08-13 00:34:24,814] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2025-08-13 00:34:25,226] root - INFO - ====================Data Ingestion log started.==================== 
+[2025-08-13 00:34:25,226] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 00:34:25,226] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 00:34:25,226] root - INFO - Downloading data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-13 00:34:25,827] root - INFO - Downloaded data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-13 00:34:25,900] root - INFO - Extracting zip file: artifacts/dataset/raw_data/data.zip into dir: artifacts/dataset/ingested_data
+[2025-08-13 00:34:25,900] root - INFO - ====================Data Ingestion log completed.==================== 
+
+
+[2025-08-13 00:34:25,901] root - INFO - ====================Data Validation log started.==================== 
+[2025-08-13 00:34:26,025] root - INFO -  Shape of news data file: (7281, 4)
+[2025-08-13 00:34:26,025] root - INFO -  Shape of behaviours data file: (16606, 11)
+[2025-08-13 00:34:26,053] root - INFO - lowercased and removed punctuation from Title and Abstract
+[2025-08-13 00:34:26,134] root - INFO - removed stopwords from Title and Abstract
+[2025-08-13 00:34:26,150] root - INFO - removed numbers from Title and Abstract
+[2025-08-13 00:34:26,151] root - INFO - Created category mapping
+[2025-08-13 00:34:26,151] root - INFO - Created subcategory mapping

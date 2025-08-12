@@ -1,0 +1,48 @@
+[2025-08-13 02:58:34,314] numexpr.utils - INFO - Note: NumExpr detected 22 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-08-13 02:58:34,314] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2025-08-13 02:58:34,890] root - INFO - ====================Data Ingestion log started.==================== 
+[2025-08-13 02:58:34,890] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 02:58:34,890] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 02:58:34,891] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 02:58:34,891] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 02:58:34,891] root - INFO - Downloading data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-13 02:58:36,323] root - INFO - Downloaded data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-13 02:58:36,409] root - INFO - Extracting zip file: artifacts/dataset/raw_data/data.zip into dir: artifacts/dataset/ingested_data
+[2025-08-13 02:58:36,409] root - INFO - ====================Data Ingestion log completed.==================== 
+
+
+[2025-08-13 02:58:36,409] root - INFO - ====================Data Validation log started.==================== 
+[2025-08-13 02:58:36,536] root - INFO -  Shape of news data file: (7281, 4)
+[2025-08-13 02:58:36,536] root - INFO -  Shape of behaviours data file: (16606, 11)
+[2025-08-13 02:58:36,569] root - INFO - lowercased and removed punctuation from Title and Abstract
+[2025-08-13 02:58:36,662] root - INFO - removed stopwords from Title and Abstract
+[2025-08-13 02:58:36,680] root - INFO - removed numbers from Title and Abstract
+[2025-08-13 02:58:36,682] root - INFO - Created category mapping
+[2025-08-13 02:58:36,682] root - INFO - Created subcategory mapping
+[2025-08-13 02:58:36,723] root - INFO - Tokenized Title and Abstract
+[2025-08-13 02:58:37,080] root - INFO - Created word dictionary with 23761 unique words
+[2025-08-13 02:58:37,101] root - INFO - Created user id to index mapping with 1001 unique users
+[2025-08-13 02:58:37,105] root - INFO - Saved serialized objects to artifacts/serialized_objects
+[2025-08-13 02:58:37,105] root - INFO - Utils state: {'vert_num': 16, 'subvert_num': 190, 'word_num': 23761, 'uid2index': 1001}
+[2025-08-13 02:58:37,313] root - INFO - Saved cleaned data to artifacts/dataset/clean_data
+[2025-08-13 02:58:37,321] root - INFO - ====================Data Validation log completed.==================== 
+
+
+[2025-08-13 02:58:37,321] root - INFO - ====================Data Transformation log started.==================== 
+[2025-08-13 02:58:37,323] root - INFO - Temporary directory created at: /tmp/tmplfht3bh_
+[2025-08-13 02:58:37,323] root - INFO - Downloading GloVe embeddings from Hugging Face...
+[2025-08-13 02:58:37,326] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[2025-08-13 02:58:37,650] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /stanfordnlp/glove/resolve/main/glove.6B.zip HTTP/11" 302 1028
+[2025-08-13 02:58:37,653] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cdn-lfs.hf.co:443
+[2025-08-13 02:58:37,724] urllib3.connectionpool - DEBUG - https://cdn-lfs.hf.co:443 "GET /stanfordnlp/glove/6471382cdd837544bf3ac72497a38715e845897d265b2b424b4761832009c837?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27glove.6B.zip%3B+filename%3D%22glove.6B.zip%22%3B&response-content-type=application%2Fzip&Expires=1755014317&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1NTAxNDMxN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zdGFuZm9yZG5scC9nbG92ZS82NDcxMzgyY2RkODM3NTQ0YmYzYWM3MjQ5N2EzODcxNWU4NDU4OTdkMjY1YjJiNDI0YjQ3NjE4MzIwMDljODM3P3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=uDyCN-oIdpCdEUGDbD1K0lOI0kgotJZWOK2HsJGvBE-cYq0-VX2fW6lkfaW2B4AZZmbEAL120BNHIUCETDbTag2UE-R~S03ezQSXxD5v5njFrrOKFL07ltcmT027RXxpWaes--n1AIfFFTjFNCwC7JMaB~MTub53CyllXR1Pos6qt03ZdGMWcOYLyQQDQIWii4ztaB3ItS0TKg14u3d6I~MrXXpa-zoZWvwvKLafj4uHLZuXFyGOrK0apQ4ULJJ~rgRv8cEC7AIXt-fkizio8Qc-uHe59XSWgiaV89thHKEhvkhiC6neF07O~dSLfzdKOn0wr6gaERIOtyGH9KRjwg__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/11" 200 862182753
+[2025-08-13 02:58:53,285] root - INFO - Download complete.
+[2025-08-13 02:58:53,285] root - INFO - Extracting GloVe embeddings...
+[2025-08-13 02:59:02,286] root - INFO - Extraction complete.
+[2025-08-13 02:59:02,290] root - INFO - Word dictionary loaded with 23761 words.
+[2025-08-13 02:59:03,686] root - INFO - Embedding matrix created
+[2025-08-13 02:59:03,686] root - INFO - Embedding matrix dimensions: 23762 x 100
+[2025-08-13 02:59:03,693] root - INFO - Saved embedding matrix to artifacts/dataset/transformed_data
+[2025-08-13 02:59:03,693] root - INFO - Temporary directory /tmp/tmplfht3bh_ cleaned up.
+[2025-08-13 02:59:05,768] root - INFO - ====================Data Transformation log completed.==================== 
+
+

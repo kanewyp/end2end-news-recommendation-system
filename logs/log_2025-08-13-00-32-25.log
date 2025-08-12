@@ -1,0 +1,12 @@
+[2025-08-13 00:32:26,064] numexpr.utils - INFO - Note: NumExpr detected 22 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-08-13 00:32:26,064] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2025-08-13 00:32:26,279] root - INFO - ====================Data Ingestion log started.==================== 
+[2025-08-13 00:32:26,279] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 00:32:26,279] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 00:32:26,279] root - INFO - Downloading data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-13 00:32:27,247] root - INFO - Downloaded data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-13 00:32:27,318] root - INFO - Extracting zip file: artifacts/dataset/raw_data/data.zip into dir: artifacts/dataset/ingested_data
+[2025-08-13 00:32:27,318] root - INFO - ====================Data Ingestion log completed.==================== 
+
+
+[2025-08-13 00:32:27,319] root - INFO - ====================Data Validation log started.==================== 

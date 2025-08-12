@@ -1,0 +1,69 @@
+[2025-08-13 04:35:18,486] numexpr.utils - INFO - Note: NumExpr detected 22 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-08-13 04:35:18,486] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2025-08-13 04:35:20,871] root - INFO - ====================Data Ingestion log started.==================== 
+[2025-08-13 04:35:20,871] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 04:35:20,871] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 04:35:20,871] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 04:35:20,871] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 04:35:20,871] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 04:35:20,871] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 04:35:20,871] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 04:35:20,871] root - INFO - Downloading data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-13 04:35:22,410] root - INFO - Downloaded data from https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip into file artifacts/dataset/raw_data/data.zip
+[2025-08-13 04:35:22,511] root - INFO - Extracting zip file: artifacts/dataset/raw_data/data.zip into dir: artifacts/dataset/ingested_data
+[2025-08-13 04:35:22,511] root - INFO - ====================Data Ingestion log completed.==================== 
+
+
+[2025-08-13 04:35:22,512] root - INFO - ====================Data Validation log started.==================== 
+[2025-08-13 04:35:22,691] root - INFO -  Shape of news data file: (7281, 5)
+[2025-08-13 04:35:22,691] root - INFO -  Shape of behaviours data file: (16606, 11)
+[2025-08-13 04:35:22,727] root - INFO - lowercased and removed punctuation from Title and Abstract
+[2025-08-13 04:35:23,173] root - INFO - removed stopwords from Title and Abstract
+[2025-08-13 04:35:23,188] root - INFO - removed numbers from Title and Abstract
+[2025-08-13 04:35:23,193] root - INFO - Created category mapping
+[2025-08-13 04:35:23,194] root - INFO - Created subcategory mapping
+[2025-08-13 04:35:23,258] root - INFO - Tokenized Title and Abstract
+[2025-08-13 04:35:23,609] root - INFO - Created word dictionary with 23761 unique words
+[2025-08-13 04:35:23,634] root - INFO - Created user id to index mapping with 1001 unique users
+[2025-08-13 04:35:23,655] root - INFO - Saved serialized objects to artifacts/serialized_objects
+[2025-08-13 04:35:23,655] root - INFO - Utils state: {'vert_num': 16, 'subvert_num': 190, 'word_num': 23761, 'uid2index': 1001}
+[2025-08-13 04:35:23,844] root - INFO - Saved cleaned data to artifacts/dataset/clean_data
+[2025-08-13 04:35:23,850] root - INFO - ====================Data Validation log completed.==================== 
+
+
+[2025-08-13 04:35:23,850] root - INFO - ====================Data Transformation log started.==================== 
+[2025-08-13 04:35:23,852] root - INFO - Temporary directory created at: /tmp/tmpbnkun8n0
+[2025-08-13 04:35:23,852] root - INFO - Downloading GloVe embeddings from Hugging Face...
+[2025-08-13 04:35:23,854] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[2025-08-13 04:35:24,553] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /stanfordnlp/glove/resolve/main/glove.6B.zip HTTP/11" 302 1030
+[2025-08-13 04:35:24,554] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cdn-lfs.hf.co:443
+[2025-08-13 04:35:24,617] urllib3.connectionpool - DEBUG - https://cdn-lfs.hf.co:443 "GET /stanfordnlp/glove/6471382cdd837544bf3ac72497a38715e845897d265b2b424b4761832009c837?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27glove.6B.zip%3B+filename%3D%22glove.6B.zip%22%3B&response-content-type=application%2Fzip&Expires=1755020124&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1NTAyMDEyNH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zdGFuZm9yZG5scC9nbG92ZS82NDcxMzgyY2RkODM3NTQ0YmYzYWM3MjQ5N2EzODcxNWU4NDU4OTdkMjY1YjJiNDI0YjQ3NjE4MzIwMDljODM3P3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=rHtcKLAwXQilOPrR3VSgM7-16zfpcmPFdRE6PhtPaONxBLyBI5yRlvZTFo-quiBO2aHcCUN3F2AwTDFNSrDbyP2B8ML5my7cDEOYzxmHdGWJVLJ35ZbHrG~k71SaqGLcZBcGmRVivX03CRivJALRXA3iAmMrebdR67f-tF-N~uADQUOGci3lVNiXngpgENvWDfDEVFpuqNrc-P2WIUWw9YVXN0~zm3gwLpdKI3YPTSTu5NbZXd1vKYh9WqswCSxoBUazF~S6KpvyOgZHXMndCqE~oeXZm1t0hB1N49PURSUYaEn-xmzvlQsAu6GDmfA~A6YY5qaUpGgzsA4QZRCSZA__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/11" 200 862182753
+[2025-08-13 04:36:03,279] root - INFO - Download complete.
+[2025-08-13 04:36:03,286] root - INFO - Extracting GloVe embeddings...
+[2025-08-13 04:36:13,257] root - INFO - Extraction complete.
+[2025-08-13 04:36:13,267] root - INFO - Word dictionary loaded with 23761 words.
+[2025-08-13 04:36:15,221] root - INFO - Embedding matrix created
+[2025-08-13 04:36:15,221] root - INFO - Embedding matrix dimensions: 23762 x 100
+[2025-08-13 04:36:15,234] root - INFO - Saved embedding matrix to artifacts/dataset/transformed_data
+[2025-08-13 04:36:15,234] root - INFO - Temporary directory /tmp/tmpbnkun8n0 cleaned up.
+[2025-08-13 04:36:15,395] root - INFO - ====================Data Transformation log completed.==================== 
+
+
+[2025-08-13 04:36:15,396] root - INFO - ====================Model Trainer log started.==================== 
+[2025-08-13 04:36:15,400] root - INFO - Serialized objects loaded successfully.
+[2025-08-13 04:36:15,416] root - INFO - Embedding matrix loaded successfully.
+[2025-08-13 04:36:15,416] root - INFO - Vocabulary size: 23761
+[2025-08-13 04:36:15,416] root - INFO - Embedding matrix shape: (23762, 100)
+[2025-08-13 04:36:15,416] root - INFO - Number of users: 1001
+[2025-08-13 04:36:15,416] root - INFO - Number of categories: 16
+[2025-08-13 04:36:15,416] root - INFO - Number of subcategories: 190
+[2025-08-13 04:36:15,422] root - INFO - 3.8.20 (default, Oct  3 2024, 15:24:27) 
+[GCC 11.2.0]
+[2025-08-13 04:36:15,423] root - INFO - Using device: cpu
+[2025-08-13 04:36:15,610] root - INFO - News and Behaviours data loaded successfully.
+[2025-08-13 04:36:16,666] root - INFO - News data converted successfully.
+[2025-08-13 04:36:16,666] root - INFO - Preparing training data...
+[2025-08-13 04:36:35,589] root - INFO - Total training samples: 53979
+[2025-08-13 04:36:35,638] root - INFO - Training samples: 43183, Validation samples: 10796
+[2025-08-13 04:36:35,639] root - INFO - Datasets created successfully.
+[2025-08-13 04:36:35,643] root - INFO - DataLoaders created successfully.

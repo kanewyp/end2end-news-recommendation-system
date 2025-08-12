@@ -1,0 +1,149 @@
+[2025-08-13 05:16:51,588] numexpr.utils - INFO - Note: NumExpr detected 22 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-08-13 05:16:51,588] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2025-08-13 05:16:53,762] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 05:16:53,763] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 05:16:53,763] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 05:16:53,763] root - INFO - ====================Model Trainer log started.==================== 
+[2025-08-13 05:16:53,769] root - INFO - Serialized objects loaded successfully.
+[2025-08-13 05:16:53,785] root - INFO - Embedding matrix loaded successfully.
+[2025-08-13 05:16:53,785] root - INFO - Vocabulary size: 23761
+[2025-08-13 05:16:53,785] root - INFO - Embedding matrix shape: (23762, 100)
+[2025-08-13 05:16:53,785] root - INFO - Number of users: 1001
+[2025-08-13 05:16:53,785] root - INFO - Number of categories: 16
+[2025-08-13 05:16:53,785] root - INFO - Number of subcategories: 190
+[2025-08-13 05:16:53,786] root - INFO - 3.8.20 (default, Oct  3 2024, 15:24:27) 
+[GCC 11.2.0]
+[2025-08-13 05:16:53,786] root - INFO - Using device: cpu
+[2025-08-13 05:16:53,910] root - INFO - News and Behaviours data loaded successfully.
+[2025-08-13 05:16:54,549] root - INFO - News data converted successfully.
+[2025-08-13 05:16:54,549] root - INFO - Preparing training data...
+[2025-08-13 05:17:13,052] root - INFO - Total training samples: 53979
+[2025-08-13 05:17:13,073] root - INFO - Training samples: 43183, Validation samples: 10796
+[2025-08-13 05:17:13,074] root - INFO - Datasets created successfully.
+[2025-08-13 05:17:13,075] root - INFO - DataLoaders created successfully.
+[2025-08-13 05:17:13,101] root - INFO - Model initialized successfully.
+[2025-08-13 05:17:13,102] root - INFO - Training components initialized successfully.
+[2025-08-13 05:17:13,102] root - INFO - Starting training...
+[2025-08-13 05:17:13,102] root - INFO - Training for 20 epochs
+[2025-08-13 05:17:13,102] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:17:13,102] root - INFO - Epoch 1/20
+[2025-08-13 05:17:36,081] root - INFO - Train Loss: 0.6905, Train AUC: 0.5432, Train Acc: 0.5306
+[2025-08-13 05:17:36,083] root - INFO - Val Loss: 0.6832, Val AUC: 0.5864, Val Acc: 0.5547
+[2025-08-13 05:17:36,083] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:17:36,084] root - INFO - New best model! AUC: 0.5864
+[2025-08-13 05:17:36,084] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:17:36,084] root - INFO - Epoch 2/20
+[2025-08-13 05:18:02,056] root - INFO - Train Loss: 0.6790, Train AUC: 0.5931, Train Acc: 0.5658
+[2025-08-13 05:18:02,056] root - INFO - Val Loss: 0.6766, Val AUC: 0.6032, Val Acc: 0.5724
+[2025-08-13 05:18:02,056] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:18:02,057] root - INFO - New best model! AUC: 0.6032
+[2025-08-13 05:18:02,057] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:18:02,057] root - INFO - Epoch 3/20
+[2025-08-13 05:18:30,049] root - INFO - Train Loss: 0.6736, Train AUC: 0.6098, Train Acc: 0.5778
+[2025-08-13 05:18:30,050] root - INFO - Val Loss: 0.6732, Val AUC: 0.6116, Val Acc: 0.5746
+[2025-08-13 05:18:30,050] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:18:30,050] root - INFO - New best model! AUC: 0.6116
+[2025-08-13 05:18:30,051] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:18:30,051] root - INFO - Epoch 4/20
+[2025-08-13 05:18:58,144] root - INFO - Train Loss: 0.6689, Train AUC: 0.6238, Train Acc: 0.5914
+[2025-08-13 05:18:58,144] root - INFO - Val Loss: 0.6765, Val AUC: 0.6154, Val Acc: 0.5697
+[2025-08-13 05:18:58,144] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:18:58,145] root - INFO - New best model! AUC: 0.6154
+[2025-08-13 05:18:58,145] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:18:58,145] root - INFO - Epoch 5/20
+[2025-08-13 05:19:32,380] root - INFO - Train Loss: 0.6659, Train AUC: 0.6295, Train Acc: 0.5908
+[2025-08-13 05:19:32,380] root - INFO - Val Loss: 0.6694, Val AUC: 0.6223, Val Acc: 0.5845
+[2025-08-13 05:19:32,380] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:19:32,380] root - INFO - New best model! AUC: 0.6223
+[2025-08-13 05:19:32,381] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:19:32,381] root - INFO - Epoch 6/20
+[2025-08-13 05:20:17,951] root - INFO - Train Loss: 0.6620, Train AUC: 0.6400, Train Acc: 0.6023
+[2025-08-13 05:20:17,951] root - INFO - Val Loss: 0.6679, Val AUC: 0.6268, Val Acc: 0.5848
+[2025-08-13 05:20:17,951] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:20:17,951] root - INFO - New best model! AUC: 0.6268
+[2025-08-13 05:20:17,952] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:20:17,952] root - INFO - Epoch 7/20
+[2025-08-13 05:21:23,622] root - INFO - Train Loss: 0.6593, Train AUC: 0.6449, Train Acc: 0.6018
+[2025-08-13 05:21:23,622] root - INFO - Val Loss: 0.6682, Val AUC: 0.6264, Val Acc: 0.5825
+[2025-08-13 05:21:23,622] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:21:23,622] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:21:23,622] root - INFO - Epoch 8/20
+[2025-08-13 05:22:08,043] root - INFO - Train Loss: 0.6562, Train AUC: 0.6505, Train Acc: 0.6057
+[2025-08-13 05:22:08,043] root - INFO - Val Loss: 0.6641, Val AUC: 0.6327, Val Acc: 0.5903
+[2025-08-13 05:22:08,043] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:22:08,043] root - INFO - New best model! AUC: 0.6327
+[2025-08-13 05:22:08,043] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:22:08,043] root - INFO - Epoch 9/20
+[2025-08-13 05:22:47,633] root - INFO - Train Loss: 0.6531, Train AUC: 0.6565, Train Acc: 0.6104
+[2025-08-13 05:22:47,634] root - INFO - Val Loss: 0.6641, Val AUC: 0.6305, Val Acc: 0.5884
+[2025-08-13 05:22:47,634] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:22:47,634] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:22:47,634] root - INFO - Epoch 10/20
+[2025-08-13 05:23:30,324] root - INFO - Train Loss: 0.6485, Train AUC: 0.6633, Train Acc: 0.6148
+[2025-08-13 05:23:30,324] root - INFO - Val Loss: 0.6653, Val AUC: 0.6330, Val Acc: 0.5945
+[2025-08-13 05:23:30,324] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:23:30,324] root - INFO - New best model! AUC: 0.6330
+[2025-08-13 05:23:30,324] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:23:30,324] root - INFO - Epoch 11/20
+[2025-08-13 05:24:20,586] root - INFO - Train Loss: 0.6421, Train AUC: 0.6748, Train Acc: 0.6217
+[2025-08-13 05:24:20,586] root - INFO - Val Loss: 0.6688, Val AUC: 0.6295, Val Acc: 0.5905
+[2025-08-13 05:24:20,586] root - INFO - Learning Rate: 0.001000
+[2025-08-13 05:24:20,586] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:24:20,586] root - INFO - Epoch 12/20
+[2025-08-13 05:25:02,934] root - INFO - Train Loss: 0.6359, Train AUC: 0.6841, Train Acc: 0.6287
+[2025-08-13 05:25:02,934] root - INFO - Val Loss: 0.6642, Val AUC: 0.6325, Val Acc: 0.5893
+[2025-08-13 05:25:02,934] root - INFO - Learning Rate: 0.000500
+[2025-08-13 05:25:02,934] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:25:02,934] root - INFO - Epoch 13/20
+[2025-08-13 05:25:46,065] root - INFO - Train Loss: 0.6269, Train AUC: 0.6981, Train Acc: 0.6381
+[2025-08-13 05:25:46,066] root - INFO - Val Loss: 0.6671, Val AUC: 0.6362, Val Acc: 0.5990
+[2025-08-13 05:25:46,066] root - INFO - Learning Rate: 0.000500
+[2025-08-13 05:25:46,066] root - INFO - New best model! AUC: 0.6362
+[2025-08-13 05:25:46,066] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:25:46,066] root - INFO - Epoch 14/20
+[2025-08-13 05:26:34,636] root - INFO - Train Loss: 0.6187, Train AUC: 0.7094, Train Acc: 0.6473
+[2025-08-13 05:26:34,636] root - INFO - Val Loss: 0.6692, Val AUC: 0.6369, Val Acc: 0.5989
+[2025-08-13 05:26:34,636] root - INFO - Learning Rate: 0.000500
+[2025-08-13 05:26:34,636] root - INFO - New best model! AUC: 0.6369
+[2025-08-13 05:26:34,636] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:26:34,637] root - INFO - Epoch 15/20
+[2025-08-13 05:27:33,460] root - INFO - Train Loss: 0.6162, Train AUC: 0.7130, Train Acc: 0.6494
+[2025-08-13 05:27:33,460] root - INFO - Val Loss: 0.6696, Val AUC: 0.6383, Val Acc: 0.5999
+[2025-08-13 05:27:33,460] root - INFO - Learning Rate: 0.000500
+[2025-08-13 05:27:33,460] root - INFO - New best model! AUC: 0.6383
+[2025-08-13 05:27:33,460] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:27:33,460] root - INFO - Epoch 16/20
+[2025-08-13 05:28:21,143] root - INFO - Train Loss: 0.6116, Train AUC: 0.7198, Train Acc: 0.6557
+[2025-08-13 05:28:21,144] root - INFO - Val Loss: 0.6668, Val AUC: 0.6398, Val Acc: 0.5984
+[2025-08-13 05:28:21,146] root - INFO - Learning Rate: 0.000250
+[2025-08-13 05:28:21,146] root - INFO - New best model! AUC: 0.6398
+[2025-08-13 05:28:21,146] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:28:21,146] root - INFO - Epoch 17/20
+[2025-08-13 05:29:08,441] root - INFO - Train Loss: 0.6041, Train AUC: 0.7288, Train Acc: 0.6602
+[2025-08-13 05:29:08,441] root - INFO - Val Loss: 0.6725, Val AUC: 0.6390, Val Acc: 0.5982
+[2025-08-13 05:29:08,441] root - INFO - Learning Rate: 0.000250
+[2025-08-13 05:29:08,441] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:29:08,441] root - INFO - Epoch 18/20
+[2025-08-13 05:30:04,709] root - INFO - Train Loss: 0.6013, Train AUC: 0.7320, Train Acc: 0.6627
+[2025-08-13 05:30:04,709] root - INFO - Val Loss: 0.6709, Val AUC: 0.6415, Val Acc: 0.6004
+[2025-08-13 05:30:04,709] root - INFO - Learning Rate: 0.000250
+[2025-08-13 05:30:04,710] root - INFO - New best model! AUC: 0.6415
+[2025-08-13 05:30:04,710] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:30:04,710] root - INFO - Epoch 19/20
+[2025-08-13 05:30:50,146] root - INFO - Train Loss: 0.6000, Train AUC: 0.7347, Train Acc: 0.6645
+[2025-08-13 05:30:50,146] root - INFO - Val Loss: 0.6721, Val AUC: 0.6422, Val Acc: 0.5992
+[2025-08-13 05:30:50,146] root - INFO - Learning Rate: 0.000250
+[2025-08-13 05:30:50,146] root - INFO - New best model! AUC: 0.6422
+[2025-08-13 05:30:50,146] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:30:50,146] root - INFO - Epoch 20/20
+[2025-08-13 05:31:34,842] root - INFO - Train Loss: 0.5959, Train AUC: 0.7399, Train Acc: 0.6713
+[2025-08-13 05:31:34,842] root - INFO - Val Loss: 0.6742, Val AUC: 0.6426, Val Acc: 0.6009
+[2025-08-13 05:31:34,842] root - INFO - Learning Rate: 0.000125
+[2025-08-13 05:31:34,842] root - INFO - New best model! AUC: 0.6426
+[2025-08-13 05:31:34,842] root - INFO - ------------------------------------------------------------
+[2025-08-13 05:31:34,886] root - INFO - Training completed
+[2025-08-13 05:31:34,887] root - INFO - Model saved as 'cnn_model.pth'
+[2025-08-13 05:31:34,887] root - INFO - Best validation AUC: 0.6426
+[2025-08-13 05:31:35,015] root - INFO - ====================Model Trainer log completed.==================== 
+
+

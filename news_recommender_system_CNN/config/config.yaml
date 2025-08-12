@@ -6,3 +6,35 @@ data_ingestion_config:
   dataset_dir: dataset
   ingested_dir: ingested_data
   raw_data_dir: raw_data
+
+data_validation_config:
+  clean_data_dir: clean_data
+  serialized_objects_dir: serialized_objects
+  news_tsv_file: data/news_data.tsv
+  behaviours_tsv_file: data/behaviours_data.tsv
+
+data_transformation_config:
+  glove_url: "https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip"
+  transformed_data_dir: transformed_data
+  embedding_dim: 100
+
+model_trainer_config:
+  trained_model_dir: trained_model
+  trained_model_name: model.pkl
+  batch_size: 128
+  num_filters: 128
+  filter_sizes: [3, 4, 5]
+  user_embed_dim: 50
+  category_embed_dim: 20
+  dropout: 0.3
+  learning_rate: 0.001
+  weight_decay: 1e-5
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  patience_stop_criteria: 5 # stop after 5 consecutive epochs without improvement
+  num_epochs: 20
+
+
+recommendation_config:
+  poster_api_url: https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US
+

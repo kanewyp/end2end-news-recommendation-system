@@ -3,4 +3,23 @@ numpy
 pandas
 PyYAML
 streamlit
+torch
+torchvision
+torchaudio
+tqdm
+scipy
+matplotlib
+seaborn
+plotly
+requests
+zipfile36
+pickle-mixin
+collections-extended
+ast-tools
+dataclasses
+pathlib2
+box
+ensure
+intel_extension_for_pytorch
+mkl
 -e .

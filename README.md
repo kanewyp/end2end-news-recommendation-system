@@ -1,5 +1,17 @@
 # E2E News Recommendation System
 
+## Work flow
+- config.yaml
+- config/configuration.py
+- components
+- pipeline
+- main.py
+- app.py
+
+
+## How to run?
+### STEPS:
+
 ```bash
 git clone https://github.com/kanewyp/end2end-news-recommendation-system
 ```

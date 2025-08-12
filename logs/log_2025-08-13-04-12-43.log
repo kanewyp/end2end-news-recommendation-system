@@ -1,0 +1,18 @@
+[2025-08-13 04:12:44,436] numexpr.utils - INFO - Note: NumExpr detected 22 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-08-13 04:12:44,436] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2025-08-13 04:12:46,907] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 04:12:46,907] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 04:12:46,907] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 04:12:46,907] root - INFO - ====================Model Trainer log started.==================== 
+[2025-08-13 04:12:46,912] root - INFO - Serialized objects loaded successfully.
+[2025-08-13 04:12:46,922] root - INFO - Embedding matrix loaded successfully.
+[2025-08-13 04:12:46,922] root - INFO - Vocabulary size: 23761
+[2025-08-13 04:12:46,922] root - INFO - Embedding matrix shape: (23762, 100)
+[2025-08-13 04:12:46,922] root - INFO - Number of users: 1001
+[2025-08-13 04:12:46,922] root - INFO - Number of categories: 16
+[2025-08-13 04:12:46,922] root - INFO - Number of subcategories: 190
+[2025-08-13 04:12:46,922] root - INFO - 3.8.20 (default, Oct  3 2024, 15:24:27) 
+[GCC 11.2.0]
+[2025-08-13 04:12:46,922] root - INFO - Using device: cpu
+[2025-08-13 04:12:47,018] root - INFO - Index(['Impression_ID,User_ID,Time,History,Impressions,Hour,DayOfWeek,Clicked_News,Non_Clicked_News,First_Clicked_News_Category,First_Clicked_News_SubCategory'], dtype='object')
+[2025-08-13 04:12:47,018] root - INFO - News and Behaviours data loaded successfully.
