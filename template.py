@@ -1,38 +1,54 @@
 import os
+from pathlib import Path
 import logging
-from pathlib import Path # for handling file paths
 
-logging.basicConfig(level=logging.INFO, format='[%(asctime)s] :  %(message)s : ')
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
+
+project_name = "news_recommender_system_CNN"
 
 list_of_files = [
-    "src/__init__.py",
-    "src/components/__init__.py",
-    "src/utils/__init__.py",
-    "src/utils/common.py",
-    "src/config/__init__.py",
-    "src/config/configuration.py",
-    "src/pipeline/__init__.py",
-    "src/entity/__init__.py",
-    "src/constants/__init__.py",
-    "src/constants/constant.py",
-    "data/description.txt",
-    "params.yaml",
-    "schema.yaml",
-    "main.py",
+    f"{project_name}/__init__.py",
+    f"{project_name}/components/__init__.py",
+    f"{project_name}/components/stage_00_data_ingestion.py",
+    f"{project_name}/components/stage_01_data_validation.py",
+    f"{project_name}/components/stage_02_data_transformation.py",
+    f"{project_name}/components/stage_03_model_trainer.py",
+    f"{project_name}/config/__init__.py",
+    f"{project_name}/config/configuration.py",
+    f"{project_name}/constant/__init__.py",
+    f"{project_name}/entity/__init__.py",
+    f"{project_name}/entity/config_entity.py",
+    f"{project_name}/exception/__init__.py",
+    f"{project_name}/exception/exception_handler.py",
+    f"{project_name}/logger/__init__.py",
+    f"{project_name}/logger/log.py",
+    f"{project_name}/pipeline/__init__.py",
+    f"{project_name}/pipeline/training_pipeline.py",
+    f"{project_name}/utils/__init__.py",
+    f"{project_name}/utils/util.py",
+    f"{project_name}/config/config.yaml",
+    ".dockerignore",
     "app.py",
-    "requirements.txt",
-    "setup.py",
-    "research/trials.ipynb",
-    "templates/index.html"
+    "Dockerfile",
+    "setup.py"
 ]
 
-for file_path in list_of_files:
-    file_path = Path(file_path)
-    if not file_path.exists():
-        file_dir = file_path.parent
-        if not file_dir.exists():
-            logging.info(f"Creating directory: {file_dir}")
-            os.makedirs(file_dir, exist_ok=True)
-        logging.info(f"Creating file: {file_path}")
-        with open(file_path, 'w') as f:
-            pass  # Create an empty file
+
+for filepath in list_of_files:
+    filepath = Path(filepath)
+
+    filedir, filename = os.path.split(filepath)
+
+    if filedir !="":
+        os.makedirs(filedir, exist_ok=True)
+        logging.info(f"Creating directory: {filedir} for the file {filename}")
+
+    
+    if(not os.path.exists(filename)) or (os.path.getsize(filename) == 0):
+        with open(filepath, 'w') as f:
+            pass
+            logging.info(f"Creating empty file: {filename}")
+
+    
+    else:
+        logging.info(f"{filename} is already created")
