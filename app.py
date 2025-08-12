@@ -1,0 +1,3 @@
+from news_recommender_system_CNN.exception import AppException
+from news_recommender_system_CNN.logger.log import logging
+
