@@ -8,6 +8,9 @@
 - main.py
 - app.py
 
+## Display
+![Image 1](image/main_page.png)
+![Image 2](image/output_page.png)
 
 ## How to run?
 ### STEPS:

@@ -1,0 +1,57 @@
+[2025-08-13 16:33:59,492] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 16:33:59,492] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 16:33:59,492] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 16:33:59,492] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 16:33:59,492] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 16:36:16,541] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 16:36:16,542] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 16:36:16,542] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 16:36:16,542] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 16:36:16,542] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 16:36:17,304] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 16:36:17,305] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 16:36:17,306] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 16:36:17,306] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 16:36:17,307] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 16:36:22,635] root - INFO - Loading model from artifacts/dataset/trained_model/model.pkl...
+[2025-08-13 16:36:22,713] root - INFO - Total candidates: 7281. Processing in batches of size 128...
+[2025-08-13 16:36:23,922] root - INFO -  1. Score: 0.9464 | sports > football_nfl
+[2025-08-13 16:36:23,922] root - INFO -     News ID: N50021
+[2025-08-13 16:36:23,922] root - INFO -     Title: Redskins reportedly will not pay Trent Williams remainder of 2019 salary
+[2025-08-13 16:36:23,923] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,923] root - INFO -  2. Score: 0.9383 | sports > football_nfl
+[2025-08-13 16:36:23,923] root - INFO -     News ID: N15582
+[2025-08-13 16:36:23,923] root - INFO -     Title: Fred Taylor on Pro Football Hall of Fame: 'I think I belong'
+[2025-08-13 16:36:23,924] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,924] root - INFO -  3. Score: 0.9362 | sports > football_nfl
+[2025-08-13 16:36:23,924] root - INFO -     News ID: N26647
+[2025-08-13 16:36:23,925] root - INFO -     Title: Inside the Arizona Cardinals fan base during Week 10 loss to the Tampa Bay Buccaneers
+[2025-08-13 16:36:23,925] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,925] root - INFO -  4. Score: 0.9355 | sports > football_nfl
+[2025-08-13 16:36:23,925] root - INFO -     News ID: N17661
+[2025-08-13 16:36:23,925] root - INFO -     Title: It's time for Patriots' rookie RB Damien Harris to get his chance
+[2025-08-13 16:36:23,925] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,926] root - INFO -  5. Score: 0.9354 | sports > football_nfl
+[2025-08-13 16:36:23,926] root - INFO -     News ID: N8987
+[2025-08-13 16:36:23,926] root - INFO -     Title: Ravens' tight ends a three-headed weapon
+[2025-08-13 16:36:23,926] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,927] root - INFO -  6. Score: 0.9349 | sports > football_nfl
+[2025-08-13 16:36:23,927] root - INFO -     News ID: N51488
+[2025-08-13 16:36:23,927] root - INFO -     Title: Two-time defending Class 5A football champion Owatonna loses in state quarterfinals
+[2025-08-13 16:36:23,928] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,928] root - INFO -  7. Score: 0.9335 | sports > football_nfl
+[2025-08-13 16:36:23,928] root - INFO -     News ID: N36149
+[2025-08-13 16:36:23,928] root - INFO -     Title: WATCH: Cardinals CB Byron Murphy get 1st career INT
+[2025-08-13 16:36:23,928] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,928] root - INFO -  8. Score: 0.9318 | sports > football_nfl
+[2025-08-13 16:36:23,928] root - INFO -     News ID: N46004
+[2025-08-13 16:36:23,929] root - INFO -     Title: NFL, Kaepernick camp at odds over whether list of workout attendees was promised
+[2025-08-13 16:36:23,929] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,930] root - INFO -  9. Score: 0.9317 | sports > football_nfl
+[2025-08-13 16:36:23,930] root - INFO -     News ID: N12392
+[2025-08-13 16:36:23,930] root - INFO -     Title: NFL reportedly suspends Robert Nkemdiche two weeks
+[2025-08-13 16:36:23,931] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 16:36:23,931] root - INFO - 10. Score: 0.9299 | sports > football_nfl
+[2025-08-13 16:36:23,931] root - INFO -     News ID: N1628
+[2025-08-13 16:36:23,931] root - INFO -     Title: Brandon Brooks, Eagles agree to multi-year contract extension
+[2025-08-13 16:36:23,932] root - INFO - --------------------------------------------------------------------------------
