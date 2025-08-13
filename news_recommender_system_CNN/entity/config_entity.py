@@ -32,3 +32,12 @@ ModelTrainerConfig = namedtuple("ModelTrainerConfig", ["transformed_data_file_di
                                                       "num_epochs"
                                                       ])
 
+
+ModelRecommendationConfig = namedtuple("ModelRecommendationConfig", ["model_path",
+                                                      "word_dict",
+                                                      "category_dict",
+                                                      "subcategory_dict",
+                                                      "uid2index",
+                                                      "top_k"
+                                                      ])
+

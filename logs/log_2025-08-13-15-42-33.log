@@ -1,0 +1,208 @@
+[2025-08-13 15:42:34,232] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:42:34,232] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:42:34,233] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:42:34,233] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:42:34,234] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:42:39,786] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:42:39,790] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:42:39,790] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:42:39,790] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:42:39,790] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:42:46,541] root - INFO - Loading model from artifacts/dataset/trained_model/model.pkl...
+[2025-08-13 15:42:46,833] root - INFO - Total candidates: 7281. Processing in batches of size 128...
+[2025-08-13 15:42:48,538] root - INFO -  1. Score: 0.8975 | lifestyle > lifestylevideo
+[2025-08-13 15:42:48,539] root - INFO -     News ID: N15269
+[2025-08-13 15:42:48,539] root - INFO -     Title: Queen Elizabeth Shows Rare Display of Emotion
+[2025-08-13 15:42:48,539] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,540] root - INFO -  2. Score: 0.8444 | news > newscrime
+[2025-08-13 15:42:48,540] root - INFO -     News ID: N11510
+[2025-08-13 15:42:48,540] root - INFO -     Title: 17-year-old charged as adult in shooting death of Stillwater man, police say
+[2025-08-13 15:42:48,540] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,541] root - INFO -  3. Score: 0.8357 | travel > travelnews
+[2025-08-13 15:42:48,541] root - INFO -     News ID: N23414
+[2025-08-13 15:42:48,542] root - INFO -     Title: FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says
+[2025-08-13 15:42:48,542] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,542] root - INFO -  4. Score: 0.8267 | lifestyle > lifestyledidyouknow
+[2025-08-13 15:42:48,542] root - INFO -     News ID: N38023
+[2025-08-13 15:42:48,543] root - INFO -     Title: Less Than 1% of People Can Ace This Shapes Brain Teaser
+[2025-08-13 15:42:48,543] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,543] root - INFO -  5. Score: 0.8256 | lifestyle > lifestylebuzz
+[2025-08-13 15:42:48,543] root - INFO -     News ID: N2960
+[2025-08-13 15:42:48,543] root - INFO -     Title: Nine-year-old child genius to graduate from Dutch university
+[2025-08-13 15:42:48,543] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,544] root - INFO -  6. Score: 0.8236 | tv > tv-celebrity
+[2025-08-13 15:42:48,544] root - INFO -     News ID: N48705
+[2025-08-13 15:42:48,544] root - INFO -     Title: Lori Loughlin's 'Stress Is Only Mounting' Ahead of Pretrial Hearing
+[2025-08-13 15:42:48,544] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,544] root - INFO -  7. Score: 0.8196 | lifestyle > awardstyle
+[2025-08-13 15:42:48,544] root - INFO -     News ID: N11940
+[2025-08-13 15:42:48,544] root - INFO -     Title: Hannah Brown Is 'Manifesting' a 'DWTS' Win With Mirrorball Inspired Dress (Exclusive)
+[2025-08-13 15:42:48,544] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,544] root - INFO -  8. Score: 0.8154 | lifestyle > lifestyleroyals
+[2025-08-13 15:42:48,544] root - INFO -     News ID: N60340
+[2025-08-13 15:42:48,544] root - INFO -     Title: Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family
+[2025-08-13 15:42:48,544] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,544] root - INFO -  9. Score: 0.8149 | lifestyle > lifestylebuzz
+[2025-08-13 15:42:48,544] root - INFO -     News ID: N11470
+[2025-08-13 15:42:48,544] root - INFO -     Title: New Jersey principal who died after donating bone marrow to stranger honored
+[2025-08-13 15:42:48,544] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:42:48,544] root - INFO - 10. Score: 0.8137 | music > music-celebrity
+[2025-08-13 15:42:48,544] root - INFO -     News ID: N25471
+[2025-08-13 15:42:48,544] root - INFO -     Title: Miley Cyrus Undergoes Vocal Cord Surgery, Will Require Weeks of Silence to Recover: Sources
+[2025-08-13 15:42:48,544] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:03,099] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:44:03,100] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:44:03,100] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:44:03,101] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:44:03,101] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:44:03,827] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:44:03,828] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:44:03,828] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:44:03,838] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:44:03,839] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:44:09,808] root - INFO - Loading model from artifacts/dataset/trained_model/model.pkl...
+[2025-08-13 15:44:10,161] root - INFO - Total candidates: 7281. Processing in batches of size 128...
+[2025-08-13 15:44:11,927] root - INFO -  1. Score: 0.9239 | news > newscrime
+[2025-08-13 15:44:11,927] root - INFO -     News ID: N11510
+[2025-08-13 15:44:11,927] root - INFO -     Title: 17-year-old charged as adult in shooting death of Stillwater man, police say
+[2025-08-13 15:44:11,927] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,928] root - INFO -  2. Score: 0.9147 | music > music-celebrity
+[2025-08-13 15:44:11,928] root - INFO -     News ID: N25471
+[2025-08-13 15:44:11,928] root - INFO -     Title: Miley Cyrus Undergoes Vocal Cord Surgery, Will Require Weeks of Silence to Recover: Sources
+[2025-08-13 15:44:11,929] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,929] root - INFO -  3. Score: 0.9109 | music > music-celebrity
+[2025-08-13 15:44:11,930] root - INFO -     News ID: N55943
+[2025-08-13 15:44:11,930] root - INFO -     Title: Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole
+[2025-08-13 15:44:11,930] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,930] root - INFO -  4. Score: 0.9101 | tv > tv-celebrity
+[2025-08-13 15:44:11,930] root - INFO -     News ID: N48705
+[2025-08-13 15:44:11,930] root - INFO -     Title: Lori Loughlin's 'Stress Is Only Mounting' Ahead of Pretrial Hearing
+[2025-08-13 15:44:11,930] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,930] root - INFO -  5. Score: 0.9078 | lifestyle > lifestylebuzz
+[2025-08-13 15:44:11,931] root - INFO -     News ID: N2960
+[2025-08-13 15:44:11,931] root - INFO -     Title: Nine-year-old child genius to graduate from Dutch university
+[2025-08-13 15:44:11,931] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,931] root - INFO -  6. Score: 0.9069 | lifestyle > lifestylevideo
+[2025-08-13 15:44:11,931] root - INFO -     News ID: N15269
+[2025-08-13 15:44:11,932] root - INFO -     Title: Queen Elizabeth Shows Rare Display of Emotion
+[2025-08-13 15:44:11,932] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,932] root - INFO -  7. Score: 0.9022 | news > newscrime
+[2025-08-13 15:44:11,933] root - INFO -     News ID: N49853
+[2025-08-13 15:44:11,933] root - INFO -     Title: Man At Large After Allegedly Attempting To Run Down Officer After Calif. Pursuit
+[2025-08-13 15:44:11,933] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,933] root - INFO -  8. Score: 0.9009 | travel > travelnews
+[2025-08-13 15:44:11,933] root - INFO -     News ID: N23414
+[2025-08-13 15:44:11,933] root - INFO -     Title: FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says
+[2025-08-13 15:44:11,933] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,934] root - INFO -  9. Score: 0.9005 | news > newscrime
+[2025-08-13 15:44:11,934] root - INFO -     News ID: N13423
+[2025-08-13 15:44:11,934] root - INFO -     Title: Father, daughter charged with raping woman, leaving her to die in desert
+[2025-08-13 15:44:11,934] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:11,934] root - INFO - 10. Score: 0.8997 | music > musicnews
+[2025-08-13 15:44:11,934] root - INFO -     News ID: N49279
+[2025-08-13 15:44:11,934] root - INFO -     Title: Broadway Actress Laurel Griggs Dies at Age 13
+[2025-08-13 15:44:11,934] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:18,481] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:44:18,488] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:44:18,489] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:44:18,490] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:44:18,490] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:44:19,154] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:44:19,159] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:44:19,159] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:44:19,159] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:44:19,159] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:44:24,989] root - INFO - Loading model from artifacts/dataset/trained_model/model.pkl...
+[2025-08-13 15:44:25,266] root - INFO - Total candidates: 7281. Processing in batches of size 128...
+[2025-08-13 15:44:26,995] root - INFO -  1. Score: 0.8899 | lifestyle > lifestylevideo
+[2025-08-13 15:44:26,995] root - INFO -     News ID: N15269
+[2025-08-13 15:44:26,995] root - INFO -     Title: Queen Elizabeth Shows Rare Display of Emotion
+[2025-08-13 15:44:26,996] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:26,996] root - INFO -  2. Score: 0.8891 | news > newscrime
+[2025-08-13 15:44:26,996] root - INFO -     News ID: N11510
+[2025-08-13 15:44:26,997] root - INFO -     Title: 17-year-old charged as adult in shooting death of Stillwater man, police say
+[2025-08-13 15:44:26,997] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:26,997] root - INFO -  3. Score: 0.8591 | tv > tv-celebrity
+[2025-08-13 15:44:26,997] root - INFO -     News ID: N48705
+[2025-08-13 15:44:26,998] root - INFO -     Title: Lori Loughlin's 'Stress Is Only Mounting' Ahead of Pretrial Hearing
+[2025-08-13 15:44:26,998] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:26,998] root - INFO -  4. Score: 0.8574 | news > newscrime
+[2025-08-13 15:44:26,998] root - INFO -     News ID: N49853
+[2025-08-13 15:44:26,999] root - INFO -     Title: Man At Large After Allegedly Attempting To Run Down Officer After Calif. Pursuit
+[2025-08-13 15:44:26,999] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:26,999] root - INFO -  5. Score: 0.8545 | news > newsopinion
+[2025-08-13 15:44:26,999] root - INFO -     News ID: N50773
+[2025-08-13 15:44:27,000] root - INFO -     Title: New GOP Ukraine Defense: Trump Was Just a Patsy for Sondland
+[2025-08-13 15:44:27,000] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:27,001] root - INFO -  6. Score: 0.8544 | news > newsopinion
+[2025-08-13 15:44:27,001] root - INFO -     News ID: N36330
+[2025-08-13 15:44:27,001] root - INFO -     Title: Bloomberg run should push Warren to the center   but won't
+[2025-08-13 15:44:27,001] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:27,002] root - INFO -  7. Score: 0.8495 | news > newscrime
+[2025-08-13 15:44:27,002] root - INFO -     News ID: N17175
+[2025-08-13 15:44:27,002] root - INFO -     Title: Missouri police department's tongue-in-cheek drug scam alert going viral
+[2025-08-13 15:44:27,002] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:27,003] root - INFO -  8. Score: 0.8494 | news > newsworld
+[2025-08-13 15:44:27,003] root - INFO -     News ID: N41757
+[2025-08-13 15:44:27,003] root - INFO -     Title: A US cargo ship carrying 1,400 tonnes of TNT that sank at the end of the River Thames in 1944 is posing a threat to London from its salty grave
+[2025-08-13 15:44:27,003] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:27,003] root - INFO -  9. Score: 0.8481 | news > newsus
+[2025-08-13 15:44:27,003] root - INFO -     News ID: N30605
+[2025-08-13 15:44:27,003] root - INFO -     Title: Dr. Bruce Hensel, former TV correspondent, asked girl to send sexually suggestive photos, prosecutors say
+[2025-08-13 15:44:27,003] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:27,004] root - INFO - 10. Score: 0.8474 | lifestyle > lifestylebuzz
+[2025-08-13 15:44:27,004] root - INFO -     News ID: N2960
+[2025-08-13 15:44:27,004] root - INFO -     Title: Nine-year-old child genius to graduate from Dutch university
+[2025-08-13 15:44:27,004] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:38,045] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:44:38,046] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:44:38,046] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:44:38,046] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:44:38,047] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:44:38,837] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:44:38,838] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:44:38,841] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:44:38,841] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:44:38,841] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:44:43,287] root - INFO - Loading model from artifacts/dataset/trained_model/model.pkl...
+[2025-08-13 15:44:43,749] root - INFO - Total candidates: 7281. Processing in batches of size 128...
+[2025-08-13 15:44:46,488] root - INFO -  1. Score: 0.8732 | lifestyle > lifestylevideo
+[2025-08-13 15:44:46,488] root - INFO -     News ID: N15269
+[2025-08-13 15:44:46,488] root - INFO -     Title: Queen Elizabeth Shows Rare Display of Emotion
+[2025-08-13 15:44:46,489] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,489] root - INFO -  2. Score: 0.8010 | lifestyle > lifestyledidyouknow
+[2025-08-13 15:44:46,489] root - INFO -     News ID: N38023
+[2025-08-13 15:44:46,489] root - INFO -     Title: Less Than 1% of People Can Ace This Shapes Brain Teaser
+[2025-08-13 15:44:46,489] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,490] root - INFO -  3. Score: 0.7851 | lifestyle > lifestyleparenting
+[2025-08-13 15:44:46,490] root - INFO -     News ID: N61483
+[2025-08-13 15:44:46,490] root - INFO -     Title: 12 Photos Show What It's Really Like To Grow Up Trans
+[2025-08-13 15:44:46,490] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,491] root - INFO -  4. Score: 0.7796 | lifestyle > shop-holidays
+[2025-08-13 15:44:46,491] root - INFO -     News ID: N54303
+[2025-08-13 15:44:46,491] root - INFO -     Title: Walmart's Website Has a Secret Section Filled With a Ton Old-School Toys and Games
+[2025-08-13 15:44:46,491] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,491] root - INFO -  5. Score: 0.7758 | lifestyle > lifestylecelebstyle
+[2025-08-13 15:44:46,492] root - INFO -     News ID: N28345
+[2025-08-13 15:44:46,492] root - INFO -     Title: Kristen Bell's Cozy Look Is a Lesson in Winter Airport Fashion
+[2025-08-13 15:44:46,492] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,493] root - INFO -  6. Score: 0.7753 | lifestyle > shop-holidays
+[2025-08-13 15:44:46,493] root - INFO -     News ID: N7245
+[2025-08-13 15:44:46,493] root - INFO -     Title: 19 Things to Bring as a White Elephant Gift
+[2025-08-13 15:44:46,493] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,494] root - INFO -  7. Score: 0.7713 | lifestyle > shop-holidays
+[2025-08-13 15:44:46,494] root - INFO -     News ID: N37801
+[2025-08-13 15:44:46,494] root - INFO -     Title: These Are the Top New Toys of 2019, So Consider Your Kids' Holiday Gifts Sorted
+[2025-08-13 15:44:46,494] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,495] root - INFO -  8. Score: 0.7673 | lifestyle > causes
+[2025-08-13 15:44:46,495] root - INFO -     News ID: N61235
+[2025-08-13 15:44:46,495] root - INFO -     Title: This Veteran Found His Long-Lost Love After 75 Years
+[2025-08-13 15:44:46,495] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,495] root - INFO -  9. Score: 0.7637 | lifestyle > lifestylevideo
+[2025-08-13 15:44:46,495] root - INFO -     News ID: N43522
+[2025-08-13 15:44:46,495] root - INFO -     Title: Prince Charles is Getting Into Fashion
+[2025-08-13 15:44:46,495] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:44:46,496] root - INFO - 10. Score: 0.7574 | lifestyle > lifestylecelebstyle
+[2025-08-13 15:44:46,496] root - INFO -     News ID: N45283
+[2025-08-13 15:44:46,496] root - INFO -     Title: See the Best Fashion Looks to Ever Grace the CMAs Red Carpet
+[2025-08-13 15:44:46,496] root - INFO - --------------------------------------------------------------------------------

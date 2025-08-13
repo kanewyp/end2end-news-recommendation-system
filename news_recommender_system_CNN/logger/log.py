@@ -2,6 +2,7 @@ import logging
 import os
 from datetime import datetime
 
+logging.getLogger('watchdog.observers.inotify_buffer').setLevel(logging.INFO)
 
 # Creating logs directory to store log in files
 LOG_DIR = "logs"

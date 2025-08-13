@@ -1,5 +1,4 @@
 import torch
-import intel_extension_for_pytorch as ipex
 import os
 import sys
 import torch.nn as nn

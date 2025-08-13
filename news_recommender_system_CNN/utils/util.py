@@ -19,16 +19,18 @@ def read_yaml_file(file_path: str) -> dict:
     
 
 def text_to_sequence(text_tokens, word_dict, max_len=30):
-    """Convert tokenized text to sequence of word indices"""
-    sequence = []
-    for word in text_tokens[:max_len]:  # Truncate to max_len
-        if word in word_dict:
-            sequence.append(word_dict[word])
-        else:
-            sequence.append(0)  # Unknown word
-    
-    # Pad sequence to max_len
-    while len(sequence) < max_len:
-        sequence.append(0)
-    
-    return sequence
+        try:
+            sequence = []
+            for word in text_tokens[:max_len]:  # Truncate to max_len
+                if word in word_dict:
+                    sequence.append(word_dict[word])
+                else:
+                    sequence.append(0)  # Unknown word
+
+            # Pad sequence to max_len
+            while len(sequence) < max_len:
+                sequence.append(0)
+            return sequence
+        
+        except Exception as e:
+            raise AppException(e, sys) from e

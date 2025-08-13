@@ -1,0 +1,57 @@
+[2025-08-13 15:39:19,189] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:39:19,189] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:39:19,190] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:39:19,190] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:39:19,190] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:39:26,993] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:39:26,993] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:39:26,994] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:39:26,995] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:39:26,995] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:39:28,121] root - INFO - Model Recommendation Config: ModelRecommendationConfig(model_path='artifacts/trained_model/model.pkl', word_dict='artifacts/serialized_objects/word_dict.pkl', category_dict='artifacts/serialized_objects/category_dict.pkl', subcategory_dict='artifacts/serialized_objects/subcategory_dict.pkl', uid2index='artifacts/serialized_objects/uid2index.pkl', top_k=10)
+[2025-08-13 15:39:28,122] root - INFO - Model Trainer Config: ModelTrainerConfig(transformed_data_file_dir='artifacts/dataset/transformed_data/embedding.npy', trained_model_dir='artifacts/dataset/trained_model', trained_model_name='model.pkl', batch_size=128, num_filters=128, filter_sizes=[3, 4, 5], user_embed_dim=50, category_embed_dim=20, dropout=0.3, learning_rate=0.001, weight_decay='1e-5', scheduler_factor=0.5, scheduler_patience=3, patience_stop_criteria=5, num_epochs=20)
+[2025-08-13 15:39:28,123] root - INFO - Data Transformation Config: DataTransformationConfig(clean_data_file_path='artifacts/dataset/clean_data/clean_data.csv', glove_url='https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip', transformed_data_dir='artifacts/dataset/transformed_data', embedding_dim=100)
+[2025-08-13 15:39:28,126] root - INFO - Data Validation Config: DataValidationConfig(clean_data_dir='artifacts/dataset/clean_data', news_tsv_file='artifacts/dataset/ingested_data/data/news_data.tsv', behaviours_tsv_file='artifacts/dataset/ingested_data/data/behaviours_data.tsv', serialized_objects_dir='artifacts/serialized_objects')
+[2025-08-13 15:39:28,126] root - INFO - Data Ingestion Config: DataIngestionConfig(dataset_download_url='https://github.com/kanewyp/end2end-news-recommendation-system/raw/main/data.zip', raw_data_dir='artifacts/dataset/raw_data', ingested_data_dir='artifacts/dataset/ingested_data')
+[2025-08-13 15:39:33,154] root - INFO - Loading model from artifacts/dataset/trained_model/model.pkl...
+[2025-08-13 15:39:33,541] root - INFO - Total candidates: 7281. Processing in batches of size 128...
+[2025-08-13 15:39:35,403] root - INFO -  1. Score: 0.8413 | news > newscrime
+[2025-08-13 15:39:35,403] root - INFO -     News ID: N11510
+[2025-08-13 15:39:35,403] root - INFO -     Title: 17-year-old charged as adult in shooting death of Stillwater man, police say
+[2025-08-13 15:39:35,403] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,404] root - INFO -  2. Score: 0.8063 | news > newsopinion
+[2025-08-13 15:39:35,404] root - INFO -     News ID: N36330
+[2025-08-13 15:39:35,404] root - INFO -     Title: Bloomberg run should push Warren to the center   but won't
+[2025-08-13 15:39:35,405] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,405] root - INFO -  3. Score: 0.8034 | news > newsworld
+[2025-08-13 15:39:35,405] root - INFO -     News ID: N41757
+[2025-08-13 15:39:35,405] root - INFO -     Title: A US cargo ship carrying 1,400 tonnes of TNT that sank at the end of the River Thames in 1944 is posing a threat to London from its salty grave
+[2025-08-13 15:39:35,406] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,406] root - INFO -  4. Score: 0.8004 | news > newsopinion
+[2025-08-13 15:39:35,406] root - INFO -     News ID: N50773
+[2025-08-13 15:39:35,406] root - INFO -     Title: New GOP Ukraine Defense: Trump Was Just a Patsy for Sondland
+[2025-08-13 15:39:35,406] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,406] root - INFO -  5. Score: 0.7989 | news > newscrime
+[2025-08-13 15:39:35,407] root - INFO -     News ID: N49853
+[2025-08-13 15:39:35,407] root - INFO -     Title: Man At Large After Allegedly Attempting To Run Down Officer After Calif. Pursuit
+[2025-08-13 15:39:35,407] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,408] root - INFO -  6. Score: 0.7970 | news > newsus
+[2025-08-13 15:39:35,408] root - INFO -     News ID: N30605
+[2025-08-13 15:39:35,408] root - INFO -     Title: Dr. Bruce Hensel, former TV correspondent, asked girl to send sexually suggestive photos, prosecutors say
+[2025-08-13 15:39:35,409] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,409] root - INFO -  7. Score: 0.7968 | news > newspolitics
+[2025-08-13 15:39:35,409] root - INFO -     News ID: N21216
+[2025-08-13 15:39:35,409] root - INFO -     Title: MSNBC brings George Conway as analyst for Trump hearing
+[2025-08-13 15:39:35,409] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,409] root - INFO -  8. Score: 0.7896 | news > newscrime
+[2025-08-13 15:39:35,409] root - INFO -     News ID: N17175
+[2025-08-13 15:39:35,409] root - INFO -     Title: Missouri police department's tongue-in-cheek drug scam alert going viral
+[2025-08-13 15:39:35,409] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,409] root - INFO -  9. Score: 0.7860 | news > newspolitics
+[2025-08-13 15:39:35,409] root - INFO -     News ID: N30035
+[2025-08-13 15:39:35,409] root - INFO -     Title: George Conway: 'Republicans Were Fundamentally Illogical and Incoherent'
+[2025-08-13 15:39:35,409] root - INFO - --------------------------------------------------------------------------------
+[2025-08-13 15:39:35,409] root - INFO - 10. Score: 0.7820 | news > newscrime
+[2025-08-13 15:39:35,409] root - INFO -     News ID: N6965
+[2025-08-13 15:39:35,409] root - INFO -     Title: Man, dog found dead after fire in Upstate home, fire chief says
+[2025-08-13 15:39:35,409] root - INFO - --------------------------------------------------------------------------------

@@ -3,7 +3,7 @@ import sys
 from news_recommender_system_CNN.logger.log import logging
 from news_recommender_system_CNN.exception.exception_handler import AppException
 from news_recommender_system_CNN.utils.util import read_yaml_file
-from news_recommender_system_CNN.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
+from news_recommender_system_CNN.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig, ModelRecommendationConfig
 from news_recommender_system_CNN.constant import *
 
 class AppConfiguration:
@@ -45,14 +45,14 @@ class AppConfiguration:
             news_tsv_file = data_validation_config['news_tsv_file']
             behaviours_tsv_file = data_validation_config['behaviours_tsv_file']
 
-            news_tsv_file_dir = os.path.join(artifacts_dir, dataset_dir, data_ingestion_config['ingested_dir'], news_tsv_file)
+            news_tsv_file = os.path.join(artifacts_dir, dataset_dir, data_ingestion_config['ingested_dir'], news_tsv_file)
             behaviours_tsv_file_dir = os.path.join(artifacts_dir, dataset_dir, data_ingestion_config['ingested_dir'], behaviours_tsv_file)
             clean_data_path = os.path.join(artifacts_dir, dataset_dir, data_validation_config['clean_data_dir'])
             serialized_objects_dir = os.path.join(artifacts_dir, data_validation_config['serialized_objects_dir'])
 
             response = DataValidationConfig(
                 clean_data_dir = clean_data_path,
-                news_tsv_file = news_tsv_file_dir,
+                news_tsv_file = news_tsv_file,
                 behaviours_tsv_file = behaviours_tsv_file_dir,
                 serialized_objects_dir = serialized_objects_dir
             )
@@ -134,6 +134,40 @@ class AppConfiguration:
             )
 
             logging.info(f"Model Trainer Config: {response}")
+            return response
+
+        except Exception as e:
+            raise AppException(e, sys) from e
+        
+
+    def get_recommendation_config(self) -> ModelRecommendationConfig:
+        try:
+            recommendation_config = self.configs_info['recommendation_config']
+            model_trainer_config = self.configs_info['model_trainer_config']
+            data_validation_config = self.configs_info['data_validation_config']
+            trained_model_name = model_trainer_config['trained_model_name']
+            artifacts_dir = self.configs_info['artifacts_config']['artifacts_dir']
+            trained_model_dir = os.path.join(artifacts_dir, model_trainer_config['trained_model_dir'])
+            poster_api = recommendation_config['poster_api_url']
+
+            model_path = os.path.join(trained_model_dir, trained_model_name)
+            word_dict = os.path.join(artifacts_dir, data_validation_config['serialized_objects_dir'], 'word_dict.pkl')
+            category_dict = os.path.join(artifacts_dir, data_validation_config['serialized_objects_dir'], 'category_dict.pkl')
+            subcategory_dict = os.path.join(artifacts_dir, data_validation_config['serialized_objects_dir'], 'subcategory_dict.pkl')
+            uid2index = os.path.join(artifacts_dir, data_validation_config['serialized_objects_dir'], 'uid2index.pkl')
+            top_k = recommendation_config['top_k']
+
+          
+            response = ModelRecommendationConfig(
+                model_path=model_path,
+                word_dict=word_dict,
+                category_dict=category_dict,
+                subcategory_dict=subcategory_dict,
+                uid2index=uid2index,
+                top_k=top_k
+            )
+
+            logging.info(f"Model Recommendation Config: {response}")
             return response
 
         except Exception as e:
